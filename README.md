@@ -2,7 +2,7 @@
 
 ## Project info
 
-**URL**: [Project](https://lovable.dev/projects/14fae9a6-3baf-4f63-aa00-672aba49eff4)
+**URL**: [AgentHub Project](https://lovable.dev/projects/14fae9a6-3baf-4f63-aa00-672aba49eff4)
 
 **Use your preferred IDE**
 
