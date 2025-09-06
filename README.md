@@ -2,17 +2,7 @@
 
 ## Project info
 
-**URL**: https://lovable.dev/projects/14fae9a6-3baf-4f63-aa00-672aba49eff4
-
-## How can I edit this code?
-
-There are several ways of editing your application.
-
-**Use Lovable**
-
-Simply visit the [Lovable Project](https://lovable.dev/projects/14fae9a6-3baf-4f63-aa00-672aba49eff4) and start prompting.
-
-Changes made via Lovable will be committed automatically to this repo.
+**URL**: [Project](https://lovable.dev/projects/14fae9a6-3baf-4f63-aa00-672aba49eff4)
 
 **Use your preferred IDE**
 
@@ -69,5 +59,3 @@ Simply open [Lovable](https://lovable.dev/projects/14fae9a6-3baf-4f63-aa00-672ab
 Yes, you can!
 
 To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
