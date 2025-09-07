@@ -24,15 +24,10 @@ const Index = () => {
     return matchesSearch && matchesCategory;
   });
 
-  const handleAgentClick = (agentTitle: string) => {
-    toast.success(`Opening ${agentTitle}...`, {
-      description: "Agent will be available in the next update!"
-    });
-  };
 
   return (
     <div className="min-h-screen bg-background">
-      <Header />
+      <Header searchQuery={searchQuery} setSearchQuery={setSearchQuery} />
       
       <main className="space-y-16">
         <HeroSection />
@@ -40,17 +35,7 @@ const Index = () => {
         {/* Search and Filter Section */}
         <section className="container mx-auto px-4 lg:px-8">
           <div className="flex flex-col lg:flex-row gap-4 items-center justify-between mb-8">
-            <div className="flex-1 max-w-md">
-              <div className="relative">
-                <Search className="absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-muted-foreground" />
-                <Input
-                  placeholder="Search agents..."
-                  value={searchQuery}
-                  onChange={(e) => setSearchQuery(e.target.value)}
-                  className="pl-10 bg-surface border-border/50 focus:border-primary/50"
-                />
-              </div>
-            </div>
+            {/* Category Filter Pills */}
             
             <div className="flex items-center gap-2 flex-wrap">
               <Button
@@ -88,6 +73,12 @@ const Index = () => {
 
         {/* Agent Categories */}
         <div className="container mx-auto px-4 lg:px-8 space-y-16">
+          {/* Show "More agents coming soon" caption */}
+          {!selectedCategory && !searchQuery && (
+            <div className="text-center">
+              <p className="text-sm text-muted-foreground">More agents coming soon</p>
+            </div>
+          )}
           {!selectedCategory ? (
             // Show all categories
             agentCategories.map((category) => {
@@ -105,13 +96,13 @@ const Index = () => {
                   {categoryAgents.map((agent) => (
                     <AgentCard
                       key={agent.id}
+                      id={agent.id}
                       title={agent.title}
                       description={agent.description}
                       icon={agent.icon}
                       category={agent.category}
                       features={agent.features}
                       isPopular={agent.isPopular}
-                      onClick={() => handleAgentClick(agent.title)}
                     />
                   ))}
                 </CategorySection>
@@ -123,13 +114,13 @@ const Index = () => {
               {filteredAgents.map((agent) => (
                 <AgentCard
                   key={agent.id}
+                  id={agent.id}
                   title={agent.title}
                   description={agent.description}
                   icon={agent.icon}
                   category={agent.category}
                   features={agent.features}
                   isPopular={agent.isPopular}
-                  onClick={() => handleAgentClick(agent.title)}
                 />
               ))}
             </div>

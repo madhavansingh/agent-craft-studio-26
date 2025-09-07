@@ -1,4 +1,6 @@
-# Welcome to your Lovable project
+# AgentHub - AI Agents Platform
+
+A professional SaaS-style AI agents platform with authentication, agent locking, and dynamic search/filter functionality.
 
 ## Project info
 
